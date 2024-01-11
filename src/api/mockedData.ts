@@ -50,7 +50,7 @@ export const analysisResponse = [
       origin: "sd_cm",
       value: {
         PetalWidthCm: 0.35805864148438127,
-        SepalWidthCm: 0.16840044886502064,
+        SepalWidthCm: 0.6840044886502064,
         PetalLengthCm: 0.36509329889013475,
         SepalLengthCm: 0.20844761076046325,
       },
