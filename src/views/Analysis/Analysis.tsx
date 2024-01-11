@@ -133,7 +133,7 @@ const Analysis = () => {
             }}
             tooltip={({ id, value, color }) => (
               <div
-                className="backdrop-blur-md py-1 px-2 rounded-lg border border-gray-300"
+                className="backdrop-blur-md py-1 px-2 rounded-lg"
                 style={{
                   background: color,
                   color: "black",
