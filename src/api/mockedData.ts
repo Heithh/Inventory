@@ -36,8 +36,6 @@ export const modelsResponse = [
     sk: "MD#3778AF46-487D-B909",
     ts_updated: 1702680209.9394238,
   },
-
-
 ];
 
 export const analysisResponse = [
@@ -52,7 +50,7 @@ export const analysisResponse = [
       origin: "sd_cm",
       value: {
         PetalWidthCm: 0.35805864148438127,
-        SepalWidthCm: 0.06840044886502064,
+        SepalWidthCm: 0.16840044886502064,
         PetalLengthCm: 0.36509329889013475,
         SepalLengthCm: 0.20844761076046325,
       },
