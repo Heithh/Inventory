@@ -53,7 +53,7 @@ const Analysis = () => {
       .map((item) => {
         const transformed: AnalysisEntry = { origin: item.origin };
         Object.entries(item.value).forEach(([key, value]) => {
-          transformed[key] = (value * 100).toFixed(2);
+          transformed[key] = (value * 100).toFixed(1);
         });
         return transformed;
       });
@@ -74,7 +74,7 @@ const Analysis = () => {
   };
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="container mx-auto p-4 min-w-[550px]">
       <div
         onClick={handleBackClick}
         className="absolute top-20 left-4 flex items-center hover:cursor-pointer hover:scale-125 transition duration-300 ease-in-out"
@@ -83,8 +83,8 @@ const Analysis = () => {
       </div>
 
       <h1 className="text-2xl font-bold mb-4 text-center p-5">{modelName}</h1>
-      <div className="flex flex-col items-center justify-center">
-        <div className="w-full md:w-2/3 rounded-lg sm:p-6  h-96 overflow-auto shadow-lg border border-blue-300 transition-all duration-300 ease-in-out hover:scale-105 cursor-pointer">
+      <div className="flex flex-col items-center justify-center p-4">
+        <div className="md:w-2/3 rounded-lg p-6 h-96 overflow-x-scroll overflow-y-scroll min-w-[525px] shadow-lg border border-blue-300 transition-all duration-300 ease-in-out md:hover:scale-105 cursor-pointer">
           <ResponsiveBar
             data={data}
             keys={[
@@ -95,7 +95,7 @@ const Analysis = () => {
             ]}
             indexBy="origin"
             label={(barData) => `${barData.value}%`}
-            margin={{ top: 50, right: 130, bottom: 50, left: 100 }}
+            margin={{ top: 50, right: 130, bottom: 50, left: 90 }}
             padding={0.3}
             groupMode="grouped"
             layout="horizontal"
@@ -112,6 +112,7 @@ const Analysis = () => {
               legend: "Percent %",
               legendPosition: "middle",
               legendOffset: 40,
+              tickValues: [0, 20, 40, 60, 80, 100],
             }}
             axisLeft={{
               tickSize: 5,
@@ -127,13 +128,13 @@ const Analysis = () => {
             theme={{
               labels: {
                 text: {
-                  fontWeight: 550,
+                  fontWeight: 50,
                 },
               },
             }}
             tooltip={({ id, value, color }) => (
               <div
-                className="backdrop-blur-md py-1 px-2 rounded-lg"
+                className="backdrop-blur-md py-1 px-2 rounded-lg border border-gray-300"
                 style={{
                   background: color,
                   color: "black",
