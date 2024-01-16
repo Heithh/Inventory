@@ -84,7 +84,7 @@ const Analysis = () => {
 
       <h1 className="text-2xl font-bold mb-4 text-center p-5">{modelName}</h1>
       <div className="flex flex-col items-center justify-center p-4">
-        <div className="md:w-2/3 rounded-lg p-6 h-96 overflow-x-scroll overflow-y-scroll min-w-[525px] shadow-lg border border-blue-300 transition-all duration-300 ease-in-out md:hover:scale-105 cursor-pointer">
+        <div className="md:w-2/3 rounded-lg p-6 h-96 overflow-x-auto overflow-y-auto min-w-[525px] shadow-lg border border-blue-300 transition-all duration-300 ease-in-out md:hover:scale-105 cursor-pointer">
           <ResponsiveBar
             data={data}
             keys={[
